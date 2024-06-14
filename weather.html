@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App API</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="weather.js"></script>
+</head>
+
+<body class="bg-secondary">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Fetch Weather Using API</h1>
+            </div>
+        </div>
+        <div class="p-4 bg-warning">
+            <div class="row justify-content-center mb-3">
+                <div class="col-12 col-md-6">
+                    <input type="text" class="form-control p-4 text-center" id="city" placeholder="Search Your City Here">
+                </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <button class="btn btn-success px-5" onclick="get()">Search</button>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <div class="col-12 text-center">
+                    <h1 id="cname" class="d-inline-block p-2"></h1>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-12 text-center mb-2">
+                    <h3 class="bg-secondary d-inline-block px-3 py-2" style="border: 2px solid grey; border-radius: 5px;">
+                        Description
+                    </h3>
+                </div>
+                <div class="col-12 text-center">
+                    <input type="text" id="desc" class="form-control bg-warning text-center text-light w-100" readonly>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-12 text-center mb-2">
+                    <h3 class="bg-secondary d-inline-block px-3 py-2" style="border: 2px solid grey; border-radius: 5px;">
+                        Forecast
+                    </h3>
+                </div>
+                <div class="col-12 text-center mb-2">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            Day: <input type="text" id="day1" class="form-control bg-warning text-center text-light w-100" readonly>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            Temperature: <input type="text" id="temp1" class="form-control bg-warning text-center text-light w-100" readonly>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            Wind: <input type="text" id="wind1" class="form-control bg-warning text-center text-light w-100" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-center mb-2">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            Day: <input type="text" id="day2" class="form-control bg-warning text-center text-light w-100" readonly>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            Temperature: <input type="text" id="temp2" class="form-control bg-warning text-center text-light w-100" readonly>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            Wind: <input type="text" id="wind2" class="form-control bg-warning text-center text-light w-100" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            Day: <input type="text" id="day3" class="form-control bg-warning text-center text-light w-100" readonly>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            Temperature: <input type="text" id="temp3" class="form-control bg-warning text-center text-light w-100" readonly>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            Wind: <input type="text" id="wind3" class="form-control bg-warning text-center text-light w-100" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="ml-md-3 mt-5 text-center text-md-left">Today Weather</h2>
+            <div class="row ml-md-4">
+                <div class="col-12 col-md-6 text-center mb-2">
+                    Temperature: <input type="text" id="temp" class="form-control bg-warning text-center text-light w-100" readonly>
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    Wind: <input type="text" id="wind" class="form-control bg-warning text-center text-light w-100" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App API</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/assests/js/weather.js"></script>
+</head>
+
+<body class="bg-secondary">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Fetch Weather Using API</h1>
+            </div>
+        </div>
+        <div class="p-4 bg-warning">
+
+            <div class="row justify-content-center align-items-center mb-3">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-md-6">
+                    <center>
+                        <input type="text" value="" class="form-control p-4 text-center col-6" id="city"
+                        placeholder="Search Your City Here">
+                    </center>
+                </div>
+            </div>
+
+            <div class="row justify-content-center align-items-center mb-3">
+                <button class="btn btn-success px-5" onclick="get()">Search</button>
+            </div>
+
+            <div class="row justify-content-center align-items-center mb-3">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center">
+                    <h1 id="cname" class="d-inline-block p-2"></h1>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center mb-2">
+                    <h3 class="bg-secondary pl-2 d-inline-block pr-2" style="border: 2px solid grey; border-radius: 5px;">
+                        Description
+                    </h3>
+                </div>
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center">
+                    <input type="text" id="desc" class="form-control d-inline-block bg-warning text-center text-light" style="width: 200px;" readonly>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2" style="margin-left: 130px;">
+                    <h3 class="bg-secondary pl-2 d-inline-block pr-2" style="border: 2px solid grey; border-radius: 5px;">
+                        Forecast
+                    </h3>
+                </div>
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center mb-2">
+                    Day: <input type="text" id="day1" class="form-control d-inline-block bg-warning text-center text-light" style="width: 200px;" readonly>
+                    Temperature: <input type="text" id="temp1" class="form-control d-inline-block bg-warning text-center text-light" style="width: 200px;" readonly>
+                    Wind: <input type="text" id="wind1" class="form-control d-inline-block bg-warning text-center text-light" style="width: 200px;" readonly>
+                </div>
+                <div class="col-12 text-center mb-2">
+                    Day: <input type="text" id="day2" class="form-control d-inline-block bg-warning text-center text-light" style="width: 200px;" readonly>
+                    Temperature: <input type="text" id="temp2" class="form-control d-inline-block bg-warning text-center text-light" style="width: 200px;" readonly>
+                    Wind: <input type="text" id="wind2" class="form-control d-inline-block bg-warning text-center text-light" style="width: 200px;" readonly>
+                </div>
+                <div class="col-12 text-center">
+                    Day: <input type="text" id="day3" class="form-control d-inline-block bg-warning text-center text-light" style="width: 200px;" readonly>
+                    Temperature: <input type="text" id="temp3" class="form-control d-inline-block bg-warning text-center text-light" style="width: 200px;" readonly>
+                    Wind: <input type="text" id="wind3" class="form-control d-inline-block bg-warning text-center text-light" style="width: 200px;" readonly>
+                </div>
+            </div>
+
+            <h2 class="" style="margin-left: 130px; margin-top: 50px;">Today Weather</h2>
+            <div class="row ml-4">
+                <div class="col-6 text-center">
+                    Temperature: <input type="text" id="temp" class="form-control d-inline-block bg-warning text-center text-light" style="width: 210px;" readonly>
+                </div>
+                <div class="col-4 text-center">
+                    Wind: <input type="text" id="wind" class="form-control d-inline-block bg-warning text-center text-light" style="width: 200px;" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html> -->
