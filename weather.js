@@ -4,7 +4,7 @@ function get() {
         if (city) {
             document.getElementById("cname").style.border="2px solid grey";
             document.getElementById("cname").style.borderRadius="50px";
-            document.getElementById("cname").style.width="800px";
+            // document.getElementById("cname").style.width="800px";
             document.getElementById("cname").innerText = `Showing Weather of ${city}`
         }
         const url = `https://goweather.herokuapp.com/weather/${city}`;
